@@ -62,7 +62,7 @@ services:
       - ./grafana/provisioning:/etc/grafana/provisioning
     environment:
       - GF_SECURITY_ADMIN_USER=tinboy
-      - GF_SECURITY_ADMIN_PASSWORD=162002Tin@
+      - GF_SECURITY_ADMIN_PASSWORD=Tinboy
       - GF_USERS_ALLOW_SIGN_UP=false
       - GF_SECURITY_DISABLE_BRUTE_FORCE_LOGIN_PROTECTION=false
     restart: unless-stopped
