@@ -50,7 +50,7 @@ services:
       "farm",
       "--node-rpc-url", "ws://subspace-node:9944",
       "--listen-on", "/ip4/0.0.0.0/tcp/30539",
-      "--reward-address", "st8GE9Tqbn3DFEKwS5bMBG9DhkFcD4a6Ccav6fFTJ5siVhbMT",
+      "--reward-address", "stBZcdDHSLpZccr12j4Rdqan8T7YGfxWJzEcfnU7v2KodyHHw",
       "path=/var/subspace,size=50G",
 
     ]
