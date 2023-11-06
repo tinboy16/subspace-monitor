@@ -4,7 +4,7 @@ services:
 
   node:
     container_name: subspace-node
-    image: node:test
+    image: tinnguyen1602/subnode:6-11
     volumes:
       - node-data:/var/subspace:rw
     ports:
@@ -14,7 +14,7 @@ services:
       - "9615/tcp"
     restart: unless-stopped
     command: [
-      "--chain", "gemini-3f",
+      "--chain", "gemini-3g",
       "--base-path", "/var/subspace",
       "--execution", "wasm",
       "--blocks-pruning", "256",
@@ -28,7 +28,7 @@ services:
       "--validator",
       "--prometheus-external",
       "--prometheus-port", "9615",
-      "--name", "khangnguyenl1"
+      "--name", "tinboy"
     ]
     healthcheck:
       timeout: 5s
@@ -40,7 +40,7 @@ services:
     depends_on:
       node:
         condition: service_healthy
-    image: farmer:test
+    image: tinnguyen1602/subfarm:6-11
     volumes:
       - farmer-data:/var/subspace:rw
     ports:
@@ -51,7 +51,7 @@ services:
       "--node-rpc-url", "ws://subspace-node:9944",
       "--listen-on", "/ip4/0.0.0.0/tcp/30539",
       "--reward-address", "st8GE9Tqbn3DFEKwS5bMBG9DhkFcD4a6Ccav6fFTJ5siVhbMT",
-      "path=/var/subspace,size=100G",
+      "path=/var/subspace,size=50G",
 
     ]
   grafana:
